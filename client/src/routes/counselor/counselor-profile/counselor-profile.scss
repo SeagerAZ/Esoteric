@@ -11,9 +11,13 @@
     justify-content: space-between;
     color: #252525;
 
+    @include sm {
+        flex-direction: column;
+    }
+
     // 小屏幕时navbar与content重叠了，所以要加margin-top
     @include sm {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .counselor-profile-left {

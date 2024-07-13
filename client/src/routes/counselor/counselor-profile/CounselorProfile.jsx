@@ -25,6 +25,8 @@ function CounselorProfile() {
     // console.log(currentUser);
     // 动态管理右边显示的内容， 默认显示post, 如果后面需要考虑加载性能，可以考虑懒加载react.lazy和suspense
     const [view, setView] = useState("post"); 
+    // 修改nickname
+    const [nickname, setNickname] = useState(currentUser.nickname);
 
     const renderContent = () => {
         switch (view) {
@@ -40,6 +42,14 @@ function CounselorProfile() {
                 return <Posts />
         }
     };
+
+    const handleNicknameChange = (e) => {
+        setNickname(e.target.value);
+        // 传回后端
+
+    }
+
+
 
     return (
         <div className="counselor-profile">

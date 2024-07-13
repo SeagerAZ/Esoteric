@@ -72,21 +72,7 @@ nav{
         flex-direction: space-between;
         // background-color: #6e8b74;
 
-        @include sm {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-            margin-right: 0px;
-            
-        }
-        @include md {
-            flex:8;
-        }
-        @include lg {
-            flex:6;
-        }
+        
         .logo {
             display: flex;
             justify-content: center;
@@ -115,6 +101,22 @@ nav{
         .searchbar {
             border: none;
             width: 100%;
+        }
+
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            margin-right: 0px;
+            
+        }
+        @include md {
+            flex:8;
+        }
+        @include lg {
+            flex:6;
         }
     }
     
