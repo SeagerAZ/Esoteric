@@ -16,6 +16,8 @@ function Navbar() {
     const dropdownRef = useRef(null); // 用于获取下拉菜单的DOM元素
     // 用于路由跳转
     const navigate = useNavigate();
+    // switch to selling/switch to buying
+    const [isSelling, setIsSelling] = useState(true);
     // 退出登陆
     // const handleLogout = () => {
     //     localStorage.removeItem('user');
@@ -57,6 +59,9 @@ function Navbar() {
         }
     };
     
+    const toggleSwitchMode = () => {
+        setIsSelling(prev => !prev);
+    };
 
 
     
@@ -113,9 +118,12 @@ function Navbar() {
                 </Link>
             </div>
             <div className="switch">
-                <span>
-                    Switch to selling
-                </span>
+                
+                <Link to={isSelling ? '/profile/counselor' : '/profile/client'}>
+                    <span onClick={toggleSwitchMode}>
+                        {isSelling ? 'Switch to Buying' : 'Switch to Selling'}
+                    </span>
+                </Link>
             </div>
             <div className="avatar" ref={dropdownRef} onClick={toggleDropdown}>
                 <span>{currentUser.username}</span>
