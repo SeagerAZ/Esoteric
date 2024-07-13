@@ -1,0 +1,44 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    // align-content: space-between;
+    // overflow: hidden;
+    break-inside: avoid; // 防止卡片内容分散到不同列
+    margin-bottom: 20px;
+    border-radius: 5px;
+    // width: 315px;
+    // min-width: 315px;
+    // height: auto;
+    gap: 5px;
+    
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    // background-color: pink;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    .cardImg {
+        width: 100%;
+        // height: auto;
+        // display: block;
+        // overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+
+        }
+    }
+
+    .cardDetail {
+        display: flex;
+        // flex:1;
+        max-height: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: flex-end;
+        justify-content: space-between;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+}

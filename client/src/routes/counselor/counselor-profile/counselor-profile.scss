@@ -1,0 +1,212 @@
+@import "../../../responsive.scss";
+
+.counselor-profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    // background-color: aliceblue;
+    justify-content: space-between;
+    color: #252525;
+
+    // 小屏幕时navbar与content重叠了，所以要加margin-top
+    @include sm {
+        margin-top: 30px;
+    }
+
+    .counselor-profile-left {
+        display: flex;
+        flex-direction: column;
+        flex:3;
+        // background-color: antiquewhite;
+        width: 100%;
+        height: 100vh;
+        .counselor-info {
+            display: flex;
+            flex-direction: row;
+            background-color: whitesmoke;
+            border: 1px solid #252525;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+
+            .counselor-avatar {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                // position: relative;
+                
+                cursor: pointer;
+                
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .counselor-info-details {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 10px;
+                margin: 5px;
+                // border: 1px solid #252525;
+                border-radius: 5px;
+                // background-color: white;
+                .counselor-nickname {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    margin: 5px;
+                    padding: 5px;
+                }
+                .counselor-name {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-size: 1rem;
+                    margin: 5px;
+                    padding: 5px;
+                    text-decoration: underline;
+                }
+                .counselor-createdDate{
+                    display: flex;
+                    justify-content:flex-end;
+                    // align-self: flex-end;
+                    font-size: 1rem;
+                    padding: 5px;
+                    }
+                
+                }
+            
+            .counselor-info-edit {
+                position: relative;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    margin: 5px;
+
+                }
+            }
+            
+            }
+        
+        .counselor-personalised-tags{
+            display: flex;
+            flex-direction: column;
+            // padding: 10px;
+            margin: 5px;
+            border: 1px solid #252525;
+            border-radius: 5px;
+
+            p{
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin: 5px;
+                padding: 5px;
+                // border: 1px solid #252525;
+                border-radius: 5px;
+                // background-color: rgba(220, 195, 220, 0.589);      
+            }
+        }
+
+        .counselor-self-intro {
+            display: flex;
+            flex-direction: column;
+            // padding: 10px;
+            margin: 5px;
+            border: 1px solid #252525;
+            border-radius: 5px;
+
+
+            span {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin: 5px;
+                padding: 5px;
+                color: #252525;
+            }
+        }
+    }
+
+    .counselor-profile-right {
+        flex:7;
+        // background-color: aquamarine;
+            
+        .counselor-profile-navbar {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                margin: 5px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #6e8b74;
+                    scale: 1.2;
+                }
+            }
+            button {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                margin: 5px;
+                cursor: pointer;
+                background-color: inherit;
+                font-size: larger;
+                // color: #fff;
+                border: none;
+                border-radius: 5px;
+                &:hover {
+                    background-color: #9999;
+                    color: #6e8b74;
+                    scale: 1.2;
+                }
+
+            }
+
+            .button-active {
+                background-color: rgba(93,163,157,0.4);
+                color: whitesmoke;
+            }
+        }
+
+        .counselor-profile-content{
+            display: flex;
+            flex-direction: column;
+            color: #252525;
+            height: calc(100% - 200px);
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            overflow-y: scroll;
+            // background-color:antiquewhite;
+            
+        }
+    }
+}

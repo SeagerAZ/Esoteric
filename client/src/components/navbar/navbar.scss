@@ -1,0 +1,240 @@
+@import '../../responsive.scss';
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    // background-color: aliceblue; // 最后删掉 ：）
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+
+    @include sm {
+        height: 160px;
+
+    }
+
+    .menuIcon {
+        position: absolute;
+        margin-top: -50px;
+        z-index: 1000;
+        display: none;  // 默认隐藏
+
+        img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+        @include sm {
+            display: block;  // 在小屏幕上显示
+        }
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: whitesmoke;
+        z-index: 999;
+        transition: all 1s ease-in-out;
+        .menuLogout {
+            border: 1px solid #6e8b74;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 30%;
+            top: 0;
+            left: -30%;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+            &.active {
+                left: 0;
+            }
+
+            a {
+                display: initial;
+            }
+        }
+    }
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        flex:6;
+        margin-right: 15px;
+        gap: 10px;
+        flex-direction: space-between;
+        // background-color: #6e8b74;
+
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            margin-right: 0px;
+            
+        }
+        @include md {
+            flex:8;
+        }
+        @include lg {
+            flex:6;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            // width: 120px;
+            // height: 10px;
+            // background-color: #6e8b74;
+            border-radius: 10px;
+            padding: 10px;
+            gap: 10px;
+            cursor: pointer;
+            span {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #fec76f;
+                font-family: "Dancing Script", cursive;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
+            // img {
+            //     width: 120px;
+            //     height: 140px;
+            //     // margin-right: 10px;
+            // }
+            
+        }
+        .searchbar {
+            border: none;
+            width: 100%;
+        }
+    }
+    
+    
+    .icons {
+        flex:1;
+        gap: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include md {
+            display: none;
+        }
+        @include lg {
+            flex:2
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover {
+                scale: 1.2;
+                
+            }
+        }
+    }
+
+    .switch {
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            scale: 1.2;
+            color: #6e8b74;
+        }
+
+        @include md {
+            display: none;
+        }
+        @include lg {
+            flex:2
+        }
+    }
+
+    .order {
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            scale: 1.2;
+            color: #6e8b74;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+
+    .avatar {
+        flex:1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        // background-color: #6e8b74;
+        // border-radius: 10px;
+        gap: 5px;
+        cursor: pointer;
+        @include sm {
+            display: none;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+
+        .dropdownMenu {
+            position: absolute;
+            display: flex;
+            z-index: 1000;
+            flex-direction: column;
+            top: 60px;
+            right: 0px;
+            background-color: whitesmoke ;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            padding: 10px;
+            gap: 10px;
+
+            
+            span,button {
+                padding: 8px 16px;
+                text-align: left;
+                width: 100%;
+                background: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: "Lato", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+    
+                &:hover {
+                    background-color: #6e8b74;
+                }
+            }
+        }
+        
+    }
+    
+
+}

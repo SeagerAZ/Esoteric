@@ -1,0 +1,16 @@
+.orders-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    .order {
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

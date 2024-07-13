@@ -1,0 +1,62 @@
+.bio-editor-container {
+    // border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width:100%;
+    // margin: 20px auto;
+
+    .bio-display {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin: 0;
+            flex: 1;
+        }
+
+        button {
+            background-color: white;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .bio-editor {
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .bio-editor-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+
+            button {
+                background-color: #7359d3ba;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-left: 10px;
+
+                &:first-child {
+                    background-color: #41a558ca;
+                }
+            }
+        }
+    }
+}
