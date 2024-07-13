@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './bioeditor.scss'; 
 
 function BioEditor() {
-    const [bio, setBio] = useState("这里是您的个人简介，点击编辑按钮进行编辑，最多300字。");
+    const [bio, setBio] = useState("Tell us more about yourself, click the edit button to edit. No more than 300 characters.");
     const [isEditing, setIsEditing] = useState(false);
     const [input, setInput] = useState(bio);
 
@@ -35,10 +35,11 @@ function BioEditor() {
                 </div>
             ) : (
                 <div className="bio-display">
-                    <p>{bio}</p>
                     <button onClick={() => setIsEditing(true)}>
                         <img src="/icons8-edit-64.png" alt="" />
                     </button>
+                    <h3>Description</h3>
+                    <p>{bio}</p>
                 </div>
             )}
         </div>
