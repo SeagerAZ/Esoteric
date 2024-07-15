@@ -1,0 +1,13 @@
+.waterfallContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; // 你可以调整间隙大小
+
+    .waterfallColumn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; // 调整卡片间的间隙
+    }
+}
+
+

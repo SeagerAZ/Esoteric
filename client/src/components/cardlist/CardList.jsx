@@ -1,4 +1,5 @@
 import './cardlist.scss'
+import Waterfall from '../waterfall/Waterfall';
 
 
 import Card from '../card/Card'
@@ -8,9 +9,10 @@ import { gigsData } from "../../lib/dummydata"
 function CardList() {
     return (
         <div className="cardlist">
-            {gigsData.map(gig => (
+            {/* {gigsData.map(gig => (
                 <Card key={gig.id} item={gig} />
-            ))}
+            ))} */}
+            <Waterfall items={gigsData.map(gig => <Card key={gig.id} item={gig} />)} columnCount={5} />
             
         </div>
     );
