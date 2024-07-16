@@ -3,7 +3,7 @@ import './waterfall.scss';
 
 function Waterfall({ items }) {
     const [columnCount, setColumnCount] = useState(5);
-
+    // 不同屏幕宽度下的列数
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 1200) {
@@ -25,7 +25,9 @@ function Waterfall({ items }) {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // 根据列数创建一个数组，每个元素是一个空数组，用来存储每列的内容
     const columns = Array.from({ length: columnCount }, () => []);
+    // 将传入的项按顺序分配到不同的列中
     items.forEach((item, index) => {
         columns[index % columnCount].push(item);
     });

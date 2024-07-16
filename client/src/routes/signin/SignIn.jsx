@@ -66,7 +66,7 @@ function Signin() {
                 
                 <div className="forgotPassword">
                     {/* <a href='/welcome/resetPassword'>Forgot Password?</a> */}
-                    <Link to='/welcome/resetPassword'>Forgot Password?</Link>
+                    <Link to='/welcome/forgetPassword'>Forgot Password?</Link>
                 </div>
 
                 <div className="goRegister">

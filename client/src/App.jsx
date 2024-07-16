@@ -5,6 +5,7 @@ import WelcomePage from './routes/welcomepage/WelcomePage.jsx'
 import SinglePostPage from './routes/singlepostpage/SinglePostPage.jsx'
 import SignUp from './routes/signup/SignUp.jsx'
 import SignIn from './routes/signin/SignIn.jsx'
+import ForgetPswd from './routes/signin/forgetpswd/forgetPassword.jsx'
 import {Layout, RequireAuth} from './routes/layout/Layout.jsx'
 import WelLayout from './routes/welcome_layout/welLayout.jsx'
 import ProfileLayout from './routes/profile_layout/profileLayout.jsx'
@@ -85,6 +86,10 @@ function App() {
         {
           path: "signin",
           element: <SignIn />,
+        },
+        {
+          path: "forgetPassword",
+          element: <ForgetPswd />,
         }
       ] 
     },

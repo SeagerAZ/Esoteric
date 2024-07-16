@@ -1,0 +1,74 @@
+@import '../../../responsive.scss';
+.forgetpswd {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-weight: 700;
+    color: #312d2d;
+
+    .bgImg_forget {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../assets/images/welcome-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .forgetpswd-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 500px;
+
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.35);
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        
+        @include sm{
+            width: 300px;
+            height: 400px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        p{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+
+        }
+
+        button{
+            padding: 10px;
+            background-color: #064938;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}
