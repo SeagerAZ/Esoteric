@@ -5,9 +5,10 @@ function WelcomeNavbar() {
         <nav>
             <div className="leftNav">
                 <div className="logo">
-                    <a href='/welcome/signin'>
-                        <img src="/logo_transparent.png" alt="logo" />
+                    <a href='/welcome'>
+                        {/* <img src="/logo_transparent.png" alt="logo" /> */}
                         {/* 这里应该再加个事件监听器，当在小屏幕时，点击logo导向explore的页面 */}
+                        <span>Esoteric</span>
                     </a>
                 </div>
             </div>
@@ -16,9 +17,10 @@ function WelcomeNavbar() {
 
                 <a href="/welcome/explore" className='explore'>Explore</a>
                 <div className="language">
-                    <a href="/">EN</a>
+                    {/* <a href="/">EN</a>
 
-                    <a href="/">KR</a>
+                    <a href="/">KR</a> */}
+                    Language
                 </div>
                 <a href="/welcome/signupCounselor" className='beCounselor'>Become A Counselor</a>
                 <a href='/welcome/signin'>Sign In</a>

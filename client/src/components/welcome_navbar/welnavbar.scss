@@ -14,13 +14,31 @@ nav{
     }
 
     .leftNav {
+        // display: flex;
+        // flex:1;
+        // // background-color: beige;
+        // img{
+        //     width: 120px;
+        //     height: 120px;
+        // }
+
         display: flex;
-        flex:1;
-        // background-color: beige;
-        img{
-            width: 120px;
-            height: 120px;
-        }
+        justify-content: center;
+            // width: 120px;
+            // height: 10px;
+            // background-color: #6e8b74;
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        cursor: pointer;
+        span {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #fec76f;
+                font-family: "Dancing Script", cursive;
+                font-optical-sizing: auto;
+                font-style: normal;
+            }
     }
 
     .rightNav {

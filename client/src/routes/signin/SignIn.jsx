@@ -1,6 +1,6 @@
 import './signin.scss'
 import '../../lib/apiRequest'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import apiRequest from '../../lib/apiRequest'
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -10,7 +10,7 @@ import { AuthContext } from '../../context/AuthContext'
 function Signin() {
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
-    const {currentUser, updatetUser} = useContext(AuthContext);
+    const { currentUser, updatetUser } = useContext(AuthContext);
 
 
     const navigate = useNavigate()
@@ -23,21 +23,33 @@ function Signin() {
         const formData = new FormData(e.target);
         const email = formData.get('email');
         const password = formData.get('password');
-        
+
         try {
             const res = await apiRequest.post('/auth/login', {
                 email: email,
                 password: password
             })
-            
+
             // localStorage.setItem('user', JSON.stringify(res.data));
             updatetUser(res.data);
             console.log(res.data)
-    
-            navigate('/home') 
+
+            navigate('/home')
         } catch (error) {
-            console.log(error)
-            setError(error.response.data.message)
+            // console.log(error)
+            // setError(error.response.data.message)
+            console.log("Error:", error);
+
+            if (error.response) {
+                console.log("Error response:", error.response);
+                if (error.response.data) {
+                    setError(error.response.data.message || 'An error occurred during sign in.');
+                } else {
+                    setError('Server responded with an error.');
+                }
+            } else {
+                setError('Failed to communicate with server.');
+            }
         } finally {
             setIsLoading(false);
         }
@@ -55,15 +67,15 @@ function Signin() {
                     <h1 className='title'>Sign In</h1>
                     <div className="input">
 
-                        <input name="email" type="email" id="email" placeholder='Email'required minLength={3} maxLength={20}/>
+                        <input name="email" type="email" id="email" placeholder='Email' required minLength={3} maxLength={20} />
                     </div>
                     <div className="input">
 
-                        <input name="password" type="password" id="password" placeholder='Password' required minLength={6} maxLength={8}/>
+                        <input name="password" type="password" id="password" placeholder='Password' required minLength={6} maxLength={8} />
                     </div>
                     <button disabled={isLoading}>Sign In</button>
                 </form>
-                
+
                 <div className="forgotPassword">
                     {/* <a href='/welcome/resetPassword'>Forgot Password?</a> */}
                     <Link to='/welcome/forgetPassword'>Forgot Password?</Link>
@@ -71,13 +83,13 @@ function Signin() {
 
                 <div className="goRegister">
                     <p>Don't have an account?</p>
-                    
+
                     {/* <a href='/welcome/signup'>Register Here</a> */}
                     <Link to='/welcome/signup'>Register Here</Link>
                 </div>
                 {error && <span className='signInerrMsg'>{error}</span>}
             </div>
-            
+
         </div>
     )
 }

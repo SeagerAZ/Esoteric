@@ -52,3 +52,7 @@ npm i cors
 # Functions
 
 ## 
+
+# Problem
+login失效 总有500错误
+尝试从dean的github下载重新比对后端代码

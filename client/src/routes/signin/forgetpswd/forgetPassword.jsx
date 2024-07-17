@@ -32,7 +32,7 @@ function ForgetPswd() {
                     onChange={handleEmailChange}
                 />
                 <button onClick={handleSendEmail}>Send Email</button>
-                {emailSent && <p>Email sent. Please check your inbox.</p>}
+                {emailSent && <p>Email sent! Please check your inbox.</p>}
             </div>
         </div>
         
