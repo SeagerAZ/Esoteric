@@ -1,4 +1,5 @@
-# Esoteric
+# Esoteric 
+# Freelance Services Platform
 Full-stack project with Vite (React), SCSS, Node.js, Express.js and MongoDB
 
 # Installation
